@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SAM_BHoM
 {
-    public class Class1
+    public static partial class Convert
     {
+
     }
 }

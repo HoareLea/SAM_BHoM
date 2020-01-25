@@ -12,7 +12,7 @@ using SAMG = SAM.Geometry;
 using BH.Engine.Environment;
 using BH.Engine.Geometry;
 
-namespace SAM_BHoM
+namespace BH.Engine.SAM
 {
     public static partial class Convert
     {

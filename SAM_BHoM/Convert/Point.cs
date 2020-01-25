@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using BHG = BH.oM.Geometry;
 using SAM2 = SAM.Geometry;
 
-namespace SAM_BHoM
+namespace BH.Engine.SAM
 {
     public static partial class Convert
     {

@@ -32,25 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Analytical_oM">
-      <HintPath>..\..\..\BHoM\BHoM\Build\Analytical_oM.dll</HintPath>
+      <HintPath>..\..\BHoM\Build\Analytical_oM.dll</HintPath>
     </Reference>
     <Reference Include="BHoM">
-      <HintPath>..\..\..\BHoM\BHoM\Build\BHoM.dll</HintPath>
+      <HintPath>..\..\BHoM\Build\BHoM.dll</HintPath>
     </Reference>
     <Reference Include="BHoM_Engine">
-      <HintPath>..\..\..\BHoM\BHoM_Engine\Build\BHoM_Engine.dll</HintPath>
+      <HintPath>..\..\BHoM_Engine\Build\BHoM_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Environment_Engine">
-      <HintPath>..\..\..\BHoM\BHoM_Engine\Build\Environment_Engine.dll</HintPath>
+      <HintPath>..\..\BHoM_Engine\Build\Environment_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Environment_oM">
-      <HintPath>..\..\..\BHoM\BHoM\Build\Environment_oM.dll</HintPath>
+      <HintPath>..\..\BHoM\Build\Environment_oM.dll</HintPath>
     </Reference>
     <Reference Include="Geometry_Engine">
-      <HintPath>..\..\..\BHoM\BHoM_Engine\Build\Geometry_Engine.dll</HintPath>
+      <HintPath>..\..\BHoM_Engine\Build\Geometry_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Geometry_oM">
-      <HintPath>..\..\..\BHoM\BHoM\Build\Geometry_oM.dll</HintPath>
+      <HintPath>..\..\BHoM\Build\Geometry_oM.dll</HintPath>
     </Reference>
     <Reference Include="SAM.Analytical">
       <HintPath>..\..\SAM\build\SAM.Analytical.dll</HintPath>

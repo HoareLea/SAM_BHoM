@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using BHE = BH.oM.Environment.Elements;
-using SAM2 = SAM.Analytical;
+using SAMA = SAM.Analytical;
 using BHG = BH.oM.Geometry;
 using SAMG = SAM.Geometry;
 
@@ -16,89 +16,89 @@ namespace BH.Engine.SAM
 {
     public static partial class Convert
     {
-        public static BHE.PanelType ToBHoM(this SAM2.PanelType panelType)
+        public static BHE.PanelType ToBHoM(this SAMA.PanelType panelType)
         {
             switch(panelType)
             {
-                case SAM2.PanelType.Ceiling:
+                case SAMA.PanelType.Ceiling:
                     return BHE.PanelType.Ceiling;
-                case SAM2.PanelType.CurtainWall:
+                case SAMA.PanelType.CurtainWall:
                     return BHE.PanelType.CurtainWall;
-                case SAM2.PanelType.Floor:
+                case SAMA.PanelType.Floor:
                     return BHE.PanelType.Floor;
-                case SAM2.PanelType.FloorExposed:
+                case SAMA.PanelType.FloorExposed:
                     return BHE.PanelType.FloorExposed;
-                case SAM2.PanelType.FloorInternal:
+                case SAMA.PanelType.FloorInternal:
                     return BHE.PanelType.FloorInternal;
-                case SAM2.PanelType.FloorRaised:
+                case SAMA.PanelType.FloorRaised:
                     return BHE.PanelType.FloorRaised;
-                case SAM2.PanelType.Roof:
+                case SAMA.PanelType.Roof:
                     return BHE.PanelType.Roof;
-                case SAM2.PanelType.Shade:
+                case SAMA.PanelType.Shade:
                     return BHE.PanelType.Shade;
-                case SAM2.PanelType.SlabOnGrade:
+                case SAMA.PanelType.SlabOnGrade:
                     return BHE.PanelType.SlabOnGrade;
-                case SAM2.PanelType.SolarPanel:
+                case SAMA.PanelType.SolarPanel:
                     return BHE.PanelType.SolarPanel;
-                case SAM2.PanelType.Undefined:
+                case SAMA.PanelType.Undefined:
                     return BHE.PanelType.Undefined;
-                case SAM2.PanelType.UndergroundCeiling:
+                case SAMA.PanelType.UndergroundCeiling:
                     return BHE.PanelType.UndergroundCeiling;
-                case SAM2.PanelType.UndergroundSlab:
+                case SAMA.PanelType.UndergroundSlab:
                     return BHE.PanelType.UndergroundSlab;
-                case SAM2.PanelType.UndergroundWall:
+                case SAMA.PanelType.UndergroundWall:
                     return BHE.PanelType.UndergroundWall;
-                case SAM2.PanelType.Wall:
+                case SAMA.PanelType.Wall:
                     return BHE.PanelType.Wall;
-                case SAM2.PanelType.WallExternal:
+                case SAMA.PanelType.WallExternal:
                     return BHE.PanelType.WallExternal;
-                case SAM2.PanelType.WallInternal:
+                case SAMA.PanelType.WallInternal:
                     return BHE.PanelType.WallInternal;
                 default:
                     return BHE.PanelType.Undefined;
             }
         }
 
-        public static SAM2.PanelType ToSAM(this BHE.PanelType panelType)
+        public static SAMA.PanelType ToSAM(this BHE.PanelType panelType)
         {
             switch (panelType)
             {
                 case BHE.PanelType.Ceiling:
-                    return SAM2.PanelType.Ceiling;
+                    return SAMA.PanelType.Ceiling;
                 case BHE.PanelType.CurtainWall:
-                    return SAM2.PanelType.CurtainWall;
+                    return SAMA.PanelType.CurtainWall;
                 case BHE.PanelType.Floor:
-                    return SAM2.PanelType.Floor;
+                    return SAMA.PanelType.Floor;
                 case BHE.PanelType.FloorExposed:
-                    return SAM2.PanelType.FloorExposed;
+                    return SAMA.PanelType.FloorExposed;
                 case BHE.PanelType.FloorInternal:
-                    return SAM2.PanelType.FloorInternal;
+                    return SAMA.PanelType.FloorInternal;
                 case BHE.PanelType.FloorRaised:
-                    return SAM2.PanelType.FloorRaised;
+                    return SAMA.PanelType.FloorRaised;
                 case BHE.PanelType.Roof:
-                    return SAM2.PanelType.Roof;
+                    return SAMA.PanelType.Roof;
                 case BHE.PanelType.Shade:
-                    return SAM2.PanelType.Shade;
+                    return SAMA.PanelType.Shade;
                 case BHE.PanelType.SlabOnGrade:
-                    return SAM2.PanelType.SlabOnGrade;
+                    return SAMA.PanelType.SlabOnGrade;
                 case BHE.PanelType.SolarPanel:
-                    return SAM2.PanelType.SolarPanel;
+                    return SAMA.PanelType.SolarPanel;
                 case BHE.PanelType.Undefined:
-                    return SAM2.PanelType.Undefined;
+                    return SAMA.PanelType.Undefined;
                 case BHE.PanelType.UndergroundCeiling:
-                    return SAM2.PanelType.UndergroundCeiling;
+                    return SAMA.PanelType.UndergroundCeiling;
                 case BHE.PanelType.UndergroundSlab:
-                    return SAM2.PanelType.UndergroundSlab;
+                    return SAMA.PanelType.UndergroundSlab;
                 case BHE.PanelType.UndergroundWall:
-                    return SAM2.PanelType.UndergroundWall;
+                    return SAMA.PanelType.UndergroundWall;
                 case BHE.PanelType.Wall:
-                    return SAM2.PanelType.Wall;
+                    return SAMA.PanelType.Wall;
                 case BHE.PanelType.WallExternal:
-                    return SAM2.PanelType.WallExternal;
+                    return SAMA.PanelType.WallExternal;
                 case BHE.PanelType.WallInternal:
-                    return SAM2.PanelType.WallInternal;
+                    return SAMA.PanelType.WallInternal;
                 default:
-                    return SAM2.PanelType.Undefined;
+                    return SAMA.PanelType.Undefined;
             }
         }
     }

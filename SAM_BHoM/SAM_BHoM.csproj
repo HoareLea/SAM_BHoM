@@ -32,25 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Analytical_oM">
-      <HintPath>..\..\BHoM\Build\Analytical_oM.dll</HintPath>
+      <HintPath>..\references\Analytical_oM.dll</HintPath>
     </Reference>
     <Reference Include="BHoM">
-      <HintPath>..\..\BHoM\Build\BHoM.dll</HintPath>
+      <HintPath>..\references\BHoM.dll</HintPath>
     </Reference>
     <Reference Include="BHoM_Engine">
-      <HintPath>..\..\BHoM_Engine\Build\BHoM_Engine.dll</HintPath>
+      <HintPath>..\references\BHoM_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Environment_Engine">
-      <HintPath>..\..\BHoM_Engine\Build\Environment_Engine.dll</HintPath>
+      <HintPath>..\references\Environment_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Environment_oM">
-      <HintPath>..\..\BHoM\Build\Environment_oM.dll</HintPath>
+      <HintPath>..\references\Environment_oM.dll</HintPath>
     </Reference>
     <Reference Include="Geometry_Engine">
-      <HintPath>..\..\BHoM_Engine\Build\Geometry_Engine.dll</HintPath>
+      <HintPath>..\references\Geometry_Engine.dll</HintPath>
     </Reference>
     <Reference Include="Geometry_oM">
-      <HintPath>..\..\BHoM\Build\Geometry_oM.dll</HintPath>
+      <HintPath>..\references\Geometry_oM.dll</HintPath>
     </Reference>
     <Reference Include="SAM.Analytical">
       <HintPath>..\..\SAM\build\SAM.Analytical.dll</HintPath>
@@ -71,10 +71,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Convert\Panel.cs" />
-    <Compile Include="Convert\PanelType.cs" />
-    <Compile Include="Convert\Point.cs" />
-    <Compile Include="Convert\Polyline.cs" />
+    <Compile Include="ToBHoM\Panel.cs" />
+    <Compile Include="ToBHoM\PanelType.cs" />
+    <Compile Include="ToBHoM\Point.cs" />
+    <Compile Include="ToBHoM\Polyline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

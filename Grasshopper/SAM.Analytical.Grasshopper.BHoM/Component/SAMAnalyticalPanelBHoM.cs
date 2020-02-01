@@ -62,7 +62,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
             }
 
             List<string> connectedSpaces = new List<string>();
-            if (!dataAccess.GetData(1, ref connectedSpaces) || connectedSpaces == null)
+            if (!dataAccess.GetDataList(1, connectedSpaces) || connectedSpaces == null)
             {
                 AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Invalid data");
                 return;

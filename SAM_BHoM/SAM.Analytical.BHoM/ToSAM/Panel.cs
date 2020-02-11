@@ -7,8 +7,8 @@ namespace SAM.Analytical.BHoM
         public static Panel ToSAM(this BH.oM.Environment.Elements.Panel panel)
         {
             Geometry.Spatial.Polygon3D polygon3D = Geometry.BHoM.Convert.ToSAM(panel.Polyline());
-            Geometry.Spatial.Face face = new Geometry.Spatial.Face(polygon3D);
-            PlanarBoundary3D planarBoundary3D = new PlanarBoundary3D(face);
+            Geometry.Spatial.Face3D face3D = new Geometry.Spatial.Face3D(polygon3D);
+            PlanarBoundary3D planarBoundary3D = new PlanarBoundary3D(face3D);
 
             return new Panel(null, panel.Type.ToSAM(), planarBoundary3D);
         }

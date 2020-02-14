@@ -10,7 +10,7 @@ namespace SAM.Analytical.BHoM
         public static BH.oM.Environment.Elements.Panel ToBHoM(this Panel panel)
         {
             PlanarBoundary3D planarBoundary3D = panel.PlanarBoundary3D;
-            Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace();
+            Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace3D();
             Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
 
             return new BH.oM.Environment.Elements.Panel
@@ -23,7 +23,7 @@ namespace SAM.Analytical.BHoM
         public static BH.oM.Environment.Elements.Panel ToBHoM(this Panel panel, List<string> connectedSpaces)
         {
             PlanarBoundary3D planarBoundary3D = panel.PlanarBoundary3D;
-            Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace();
+            Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace3D();
             Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
 
             return new BH.oM.Environment.Elements.Panel

@@ -71,7 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ToBHoM\Opening.cs" />
     <Compile Include="ToBHoM\Panel.cs" />
+    <Compile Include="ToBHoM\OpeningType.cs" />
     <Compile Include="ToBHoM\PanelType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToSAM\Panel.cs" />

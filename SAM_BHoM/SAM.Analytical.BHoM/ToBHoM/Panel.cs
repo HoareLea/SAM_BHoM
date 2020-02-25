@@ -13,10 +13,17 @@ namespace SAM.Analytical.BHoM
             Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace3D();
             Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
 
+            List<BH.oM.Environment.Elements.Opening> openings = new List<BH.oM.Environment.Elements.Opening>();
+            
+            List<Aperture> apertures = panel.Apertures;
+            if(apertures != null && apertures.Count > 0)
+                apertures.ForEach(x => openings.Add(x.ToBHoM()));
+
             return new BH.oM.Environment.Elements.Panel
             {
                 ExternalEdges = polygon3D.ToBHoM().ToEdges(),
                 Type = panel.PanelType.ToBHoM(),
+                Openings = openings,
             };
         }
 
@@ -26,11 +33,18 @@ namespace SAM.Analytical.BHoM
             Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace3D();
             Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
 
+            List<BH.oM.Environment.Elements.Opening> openings = new List<BH.oM.Environment.Elements.Opening>();
+
+            List<Aperture> apertures = panel.Apertures;
+            if (apertures != null && apertures.Count > 0)
+                apertures.ForEach(x => openings.Add(x.ToBHoM()));
+
             return new BH.oM.Environment.Elements.Panel
             {
                 ExternalEdges = polygon3D.ToBHoM().ToEdges(),
                 Type = panel.PanelType.ToBHoM(),
                 ConnectedSpaces = connectedSpaces,
+                Openings = openings,
             };
         }
     }

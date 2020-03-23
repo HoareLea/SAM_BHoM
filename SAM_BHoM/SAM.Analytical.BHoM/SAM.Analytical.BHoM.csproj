@@ -37,6 +37,10 @@
     <Reference Include="BHoM">
       <HintPath>..\..\references\BHoM.dll</HintPath>
     </Reference>
+    <Reference Include="Dimensional_oM, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\references\Dimensional_oM.dll</HintPath>
+    </Reference>
     <Reference Include="Environment_Engine">
       <HintPath>..\..\references\Environment_Engine.dll</HintPath>
     </Reference>

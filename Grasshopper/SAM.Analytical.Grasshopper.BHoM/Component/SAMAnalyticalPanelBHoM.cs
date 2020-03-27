@@ -36,7 +36,11 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// </summary>
         protected override void RegisterInputParams(GH_InputParamManager inputParamManager)
         {
-            inputParamManager.AddParameter(new GooPanelParam(), "_panel", "_panel", "SAM Analytical Panel", GH_ParamAccess.item);
+            int index;
+
+            index = inputParamManager.AddParameter(new GooPanelParam(), "_panel", "_panel", "SAM Analytical Panel", GH_ParamAccess.item);
+            inputParamManager[index].DataMapping = GH_DataMapping.Graft;
+
             inputParamManager.AddTextParameter("_connectedSpaces", "_connectedSpaces", "Connected Spaces Names", GH_ParamAccess.list);
         }
 

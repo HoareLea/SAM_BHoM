@@ -6,10 +6,11 @@ namespace SAM.Analytical.BHoM
     {
         public static OpeningType ToBHoM(this ApertureType apertureType)
         {
-            switch(apertureType)
+            switch (apertureType)
             {
                 case ApertureType.Window:
                     return OpeningType.Window;
+
                 case ApertureType.Door:
                     return OpeningType.Door;
             }

@@ -14,9 +14,9 @@ namespace SAM.Analytical.BHoM
             Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
 
             List<BH.oM.Environment.Elements.Opening> openings = new List<BH.oM.Environment.Elements.Opening>();
-            
+
             List<Aperture> apertures = panel.Apertures;
-            if(apertures != null && apertures.Count > 0)
+            if (apertures != null && apertures.Count > 0)
                 apertures.ForEach(x => openings.Add(x.ToBHoM()));
 
             return new BH.oM.Environment.Elements.Panel

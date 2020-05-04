@@ -157,5 +157,6 @@ erase "$(TargetPath)"</PostBuildEvent>
     <StartArguments>
     </StartArguments>
     <StartAction>Program</StartAction>
+    <DocumentationFile>..\..\build\SAM.Analytical.Grasshopper.BHoM.xml</DocumentationFile>
   </PropertyGroup>
 </Project>

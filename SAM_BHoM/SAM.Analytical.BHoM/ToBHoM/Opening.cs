@@ -6,6 +6,11 @@ namespace SAM.Analytical.BHoM
 {
     public static partial class Convert
     {
+        /// <summary>
+        /// Converts SAM Aperture to BHoM opening.
+        /// </summary>
+        /// <param name="aperture">The aperture.</param>
+        /// <returns name="opening">BHoM opening <see cref="BH.oM.Environment.Elements.Opening"/></returns>
         public static BH.oM.Environment.Elements.Opening ToBHoM(this Aperture aperture)
         {
             PlanarBoundary3D planarBoundary3D = aperture.PlanarBoundary3D;

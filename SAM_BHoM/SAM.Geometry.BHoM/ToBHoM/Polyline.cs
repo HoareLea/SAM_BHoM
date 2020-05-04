@@ -1,7 +1,5 @@
-﻿using System.Linq;
-
-using BH.oM.Geometry;
-
+﻿using BH.oM.Geometry;
+using System.Linq;
 
 namespace SAM.Geometry.BHoM
 {

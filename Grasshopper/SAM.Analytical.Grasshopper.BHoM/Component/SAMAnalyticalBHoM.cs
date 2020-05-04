@@ -1,11 +1,7 @@
-﻿using System;
-
-using Grasshopper.Kernel;
-using Grasshopper.Kernel.Types;
-
-using SAM.Core;
+﻿using Grasshopper.Kernel;
 using SAM.Analytical.Grasshopper.BHoM.Properties;
-
+using SAM.Core;
+using System;
 
 namespace SAM.Analytical.Grasshopper.BHoM
 {
@@ -48,9 +44,9 @@ namespace SAM.Analytical.Grasshopper.BHoM
         }
 
         /// <summary>
-        /// This is the method that actually does the work.
+        /// Solves the instance.
         /// </summary>
-        /// <param name="dataAccess">The DA object is used to retrieve from inputs and store in outputs.</param>
+        /// <param name="dataAccess">The data access.</param>
         protected override void SolveInstance(IGH_DataAccess dataAccess)
         {
             SAMObject sAMObject = null;
@@ -60,7 +56,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
                 return;
             }
 
-            if(sAMObject is Panel)
+            if (sAMObject is Panel)
             {
                 dataAccess.SetData(0, Analytical.BHoM.Convert.ToBHoM(((Panel)sAMObject)));
                 return;

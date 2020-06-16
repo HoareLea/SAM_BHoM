@@ -6,6 +6,9 @@
         {
             switch (panelType)
             {
+                case PanelType.Air:
+                    return BH.oM.Environment.Elements.PanelType.Air;
+
                 case PanelType.Ceiling:
                     return BH.oM.Environment.Elements.PanelType.Ceiling;
 

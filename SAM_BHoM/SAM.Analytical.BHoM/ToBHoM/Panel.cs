@@ -39,11 +39,15 @@ namespace SAM.Analytical.BHoM
             if (apertures != null && apertures.Count > 0)
                 apertures.ForEach(x => openings.Add(x.ToBHoM()));
 
+            List<string> connectedSpaces_Temp = connectedSpaces;
+            if (connectedSpaces_Temp == null)
+                connectedSpaces_Temp = new List<string>();
+
             return new BH.oM.Environment.Elements.Panel
             {
                 ExternalEdges = polygon3D.ToBHoM().ToEdges(),
                 Type = panel.PanelType.ToBHoM(),
-                ConnectedSpaces = connectedSpaces,
+                ConnectedSpaces = connectedSpaces_Temp,
                 Openings = openings,
             };
         }

@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ToBHoM\Opening.cs" />
+    <Compile Include="ToBHoM\Panels.cs" />
     <Compile Include="ToBHoM\Panel.cs" />
     <Compile Include="ToBHoM\OpeningType.cs" />
     <Compile Include="ToBHoM\PanelType.cs" />

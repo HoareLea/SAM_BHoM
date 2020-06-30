@@ -1,7 +1,10 @@
 ﻿using Grasshopper.Kernel;
+using SAM.Analytical.BHoM;
 using SAM.Analytical.Grasshopper.BHoM.Properties;
 using SAM.Core;
+using SAM.Core.Grasshopper;
 using System;
+using System.Collections.Generic;
 
 namespace SAM.Analytical.Grasshopper.BHoM
 {
@@ -32,7 +35,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// </summary>
         protected override void RegisterInputParams(GH_InputParamManager inputParamManager)
         {
-            inputParamManager.AddParameter(new Core.Grasshopper.GooSAMObjectParam<SAMObject>(), "_SAMAnalytical", "_SAMAnalytical", "SAM Analytical Object", GH_ParamAccess.item);
+            inputParamManager.AddParameter(new GooSAMObjectParam<SAMObject>(), "_sAMAnalytical", "_sAMAnalytical", "SAM Analytical Object", GH_ParamAccess.item);
         }
 
         /// <summary>
@@ -58,7 +61,13 @@ namespace SAM.Analytical.Grasshopper.BHoM
 
             if (sAMObject is Panel)
             {
-                dataAccess.SetData(0, Analytical.BHoM.Convert.ToBHoM(((Panel)sAMObject)));
+                dataAccess.SetDataList(0, new List<BH.oM.Environment.Elements.Panel>() { Analytical.BHoM.Convert.ToBHoM((Panel)sAMObject) });
+                return;
+            }
+            else if(sAMObject is AdjacencyCluster)
+            {
+                List<BH.oM.Environment.Elements.Panel> panels_BHoM = ((AdjacencyCluster)sAMObject).ToBHoM();
+                dataAccess.SetDataList(0, panels_BHoM);
                 return;
             }
 

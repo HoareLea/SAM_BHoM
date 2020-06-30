@@ -25,7 +25,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// </summary>
         public SAMAnalyticalBHoM()
           : base("SAMAnalytical.BHoM", "SAMAnalytical.BHoM",
-              "Convert SAM Analytical Object ie. Panel, Space to BHoM",
+              "Convert SAM Analytical Object ie. AdjacencyCluster, Panel, Space to BHoM",
               "SAM", "BHoM")
         {
         }

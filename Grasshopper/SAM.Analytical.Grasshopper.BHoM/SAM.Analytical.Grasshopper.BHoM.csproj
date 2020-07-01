@@ -60,6 +60,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\references\Environment_oM.dll</HintPath>
     </Reference>
+    <Reference Include="Geometry_oM, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\references\Geometry_oM.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -105,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Component\SAMAnalyticalBHoM.cs" />
+    <Compile Include="Component\SAMAnalyticalCreateBHoMLevels.cs" />
     <Compile Include="Component\SAMAnalyticalPanelBHoM.cs" />
     <Compile Include="Kernel\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -128,6 +133,10 @@
     <ProjectReference Include="..\..\SAM_BHoM\SAM.Analytical.BHoM\SAM.Analytical.BHoM.csproj">
       <Project>{1ef60b02-13c6-4918-a39b-0a1342b37afd}</Project>
       <Name>SAM.Analytical.BHoM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SAM_BHoM\SAM.Architectural.BHoM\SAM.Architectural.BHoM.csproj">
+      <Project>{a98c4835-5eff-4dcb-8924-018d60391957}</Project>
+      <Name>SAM.Architectural.BHoM</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

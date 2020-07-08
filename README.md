@@ -1,4 +1,6 @@
 # SAM_BHoM
+[![Build Status](https://hldigitalinnovation.visualstudio.com/HLApps/_apis/build/status/SAM/SAM-deploy-SAM_BHoM?branchName=master)](https://hldigitalinnovation.visualstudio.com/HLApps/_build/latest?definitionId=24&branchName=master)
+
 SAM BHoM
 
 ## Welcome to SAM_BHoM

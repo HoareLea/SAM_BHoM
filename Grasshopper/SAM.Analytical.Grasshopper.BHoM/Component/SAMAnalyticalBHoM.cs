@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace SAM.Analytical.Grasshopper.BHoM
 {
-    public class SAMAnalyticalBHoM : GH_Component
+    public class SAMAnalyticalBHoM : GH_SAMComponent
     {
         /// <summary>
         /// Gets the unique ID for this component. Do not change this ID after release.

@@ -11,7 +11,7 @@ namespace SAM.Analytical.BHoM
         {
             PlanarBoundary3D planarBoundary3D = panel.PlanarBoundary3D;
             Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace3D();
-            Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
+            Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge3D() as Geometry.Spatial.Polygon3D;
 
             List<BH.oM.Environment.Elements.Opening> openings = new List<BH.oM.Environment.Elements.Opening>();
 
@@ -31,7 +31,7 @@ namespace SAM.Analytical.BHoM
         {
             PlanarBoundary3D planarBoundary3D = panel.PlanarBoundary3D;
             Geometry.Spatial.Face3D face3D = planarBoundary3D.GetFace3D();
-            Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge() as Geometry.Spatial.Polygon3D;
+            Geometry.Spatial.Polygon3D polygon3D = face3D.GetExternalEdge3D() as Geometry.Spatial.Polygon3D;
 
             List<BH.oM.Environment.Elements.Opening> openings = new List<BH.oM.Environment.Elements.Opening>();
 

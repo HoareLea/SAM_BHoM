@@ -6,7 +6,7 @@ namespace SAM.Analytical.BHoM
     {
         public static List<BH.oM.Geometry.SettingOut.Level> Levels(this AdjacencyCluster adjacencyCluster, double tolerance = Core.Tolerance.MacroDistance)
         {
-            List<Architectural.Level> levels = Analytical.Create.Levels(adjacencyCluster?.GetPanels(), tolerance);
+            List<Architectural.Level> levels = Analytical.Create.Levels(adjacencyCluster?.GetPanels(), false, tolerance);
             if (levels == null)
                 return null;
 

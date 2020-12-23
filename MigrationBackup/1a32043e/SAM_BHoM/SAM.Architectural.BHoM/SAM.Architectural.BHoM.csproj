@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1EF60B02-13C6-4918-A39B-0A1342B37AFD}</ProjectGuid>
+    <ProjectGuid>{A98C4835-5EFF-4DCB-8924-018D60391957}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SAM.Analytical.BHoM</RootNamespace>
-    <AssemblyName>SAM.Analytical.BHoM</AssemblyName>
+    <RootNamespace>SAM.Architectural.BHoM</RootNamespace>
+    <AssemblyName>SAM.Architectural.BHoM</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>false</Deterministic>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\build\SAM.Analytical.BHoM.xml</DocumentationFile>
+    <DocumentationFile>..\..\build\SAM.Architectural.BHoM.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,36 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Analytical_oM">
-      <HintPath>..\..\references\Analytical_oM.dll</HintPath>
-    </Reference>
-    <Reference Include="BHoM">
-      <HintPath>..\..\references\BHoM.dll</HintPath>
-    </Reference>
-    <Reference Include="Dimensional_oM, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\Dimensional_oM.dll</HintPath>
-    </Reference>
-    <Reference Include="Environment_Engine">
-      <HintPath>..\..\references\Environment_Engine.dll</HintPath>
-    </Reference>
-    <Reference Include="Environment_oM">
-      <HintPath>..\..\references\Environment_oM.dll</HintPath>
-    </Reference>
-    <Reference Include="Geometry_Engine">
-      <HintPath>..\..\references\Geometry_Engine.dll</HintPath>
-    </Reference>
     <Reference Include="Geometry_oM">
       <HintPath>..\..\references\Geometry_oM.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Analytical">
-      <HintPath>..\..\..\SAM\build\SAM.Analytical.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="SAM.Architectural, Version=1.0.7486.18354, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\SAM\build\SAM.Architectural.dll</HintPath>
     </Reference>
-    <Reference Include="SAM.Core">
+    <Reference Include="SAM.Core, Version=1.0.7486.18352, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\SAM\build\SAM.Core.dll</HintPath>
     </Reference>
     <Reference Include="SAM.Geometry">
@@ -77,30 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Create\Levels.cs" />
-    <Compile Include="ToBHoM\Opening.cs" />
-    <Compile Include="ToBHoM\Panels.cs" />
-    <Compile Include="ToBHoM\Panel.cs" />
-    <Compile Include="ToBHoM\OpeningType.cs" />
-    <Compile Include="ToBHoM\PanelType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToSAM\Panel.cs" />
-    <Compile Include="ToSAM\PanelType.cs" />
+    <Compile Include="ToBHoM\Level.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SAM.Architectural.BHoM\SAM.Architectural.BHoM.csproj">
-      <Project>{a98c4835-5eff-4dcb-8924-018d60391957}</Project>
-      <Name>SAM.Architectural.BHoM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SAM.Geometry.BHoM\SAM.Geometry.BHoM.csproj">
-      <Project>{d601ca4b-323c-4b6e-864e-36ec72004cc5}</Project>
-      <Name>SAM.Geometry.BHoM</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
-    </PackageReference>
+    <Folder Include="ToSAM\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,9 @@
     <PackageReference Include="BHoM">
       <Version>4.1.0-beta</Version>
     </PackageReference>
+    <PackageReference Include="BHoM.Engine">
+      <Version>3.3.0-alpha</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>

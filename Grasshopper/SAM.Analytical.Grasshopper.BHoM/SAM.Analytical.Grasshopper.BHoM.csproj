@@ -120,6 +120,9 @@
     <PackageReference Include="BHoM">
       <Version>4.1.0-beta</Version>
     </PackageReference>
+    <PackageReference Include="BHoM.Engine">
+      <Version>3.3.0-alpha</Version>
+    </PackageReference>
     <PackageReference Include="Grasshopper">
       <Version>6.32.20340.21001</Version>
       <ExcludeAssets>runtime</ExcludeAssets>

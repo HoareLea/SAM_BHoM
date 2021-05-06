@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Geometry_oM">
-      <HintPath>..\..\references\Geometry_oM.dll</HintPath>
-    </Reference>
     <Reference Include="SAM.Architectural, Version=1.0.7486.18354, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\SAM\build\SAM.Architectural.dll</HintPath>
@@ -63,8 +60,11 @@
     <Folder Include="ToSAM\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BHoM">
+      <Version>4.1.0-beta</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
+      <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

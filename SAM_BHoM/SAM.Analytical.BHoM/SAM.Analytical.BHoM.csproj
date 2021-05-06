@@ -35,9 +35,6 @@
     <Reference Include="Analytical_oM">
       <HintPath>..\..\references\Analytical_oM.dll</HintPath>
     </Reference>
-    <Reference Include="BHoM">
-      <HintPath>..\..\references\BHoM.dll</HintPath>
-    </Reference>
     <Reference Include="Dimensional_oM, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\references\Dimensional_oM.dll</HintPath>
@@ -98,8 +95,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="BHoM">
+      <Version>4.1.0-beta</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
+      <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -76,7 +76,13 @@ namespace SAM.Analytical.Grasshopper.BHoM
                 return;
             }
 
-            dataAccess.SetData(0, Analytical.BHoM.Convert.ToBHoM(panel, connectedSpaces));
+            BH.oM.Environment.Elements.Panel panel_BHoM = Analytical.BHoM.Convert.ToBHoM(panel);
+            if(panel_BHoM != null || connectedSpaces != null)
+            {
+                panel_BHoM.ConnectedSpaces = connectedSpaces;
+            }
+
+            dataAccess.SetData(0, panel_BHoM);
             return;
         }
     }

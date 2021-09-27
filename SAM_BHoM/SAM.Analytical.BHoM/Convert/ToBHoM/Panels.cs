@@ -7,7 +7,7 @@ namespace SAM.Analytical.BHoM
 {
     public static partial class Convert
     {
-        public static List<BH.oM.Environment.Elements.Panel> ToBHoM(this AdjacencyCluster adjacencyCluster)
+        public static List<BH.oM.Environment.Elements.Panel> ToBHoM_Panels(this AdjacencyCluster adjacencyCluster)
         {
             List<Panel> panels = adjacencyCluster?.GetPanels();
             if (panels == null)
@@ -23,7 +23,7 @@ namespace SAM.Analytical.BHoM
                     foreach (Space space in spaces)
                         connectedSpaces.Add(space.Name);
 
-                BH.oM.Environment.Elements.Panel panel_BHoM = ToBHoM(panel, connectedSpaces);
+                BH.oM.Environment.Elements.Panel panel_BHoM = ToBHoM(panel, adjacencyCluster);
                 if (panel_BHoM != null)
                     result.Add(panel_BHoM);
             }

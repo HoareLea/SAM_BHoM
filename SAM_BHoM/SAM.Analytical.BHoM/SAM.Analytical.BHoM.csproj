@@ -74,20 +74,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Convert\ToBHoM\Building.cs" />
+    <Compile Include="Convert\ToBHoM\BHoMObjects.cs" />
+    <Compile Include="Convert\ToBHoM\Space.cs" />
     <Compile Include="Create\Levels.cs" />
-    <Compile Include="ToBHoM\Opening.cs" />
-    <Compile Include="ToBHoM\Panels.cs" />
-    <Compile Include="ToBHoM\Panel.cs" />
-    <Compile Include="ToBHoM\OpeningType.cs" />
-    <Compile Include="ToBHoM\PanelType.cs" />
+    <Compile Include="Convert\ToBHoM\Opening.cs" />
+    <Compile Include="Convert\ToBHoM\Panels.cs" />
+    <Compile Include="Convert\ToBHoM\Panel.cs" />
+    <Compile Include="Convert\ToBHoM\OpeningType.cs" />
+    <Compile Include="Convert\ToBHoM\PanelType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToSAM\Panel.cs" />
-    <Compile Include="ToSAM\PanelType.cs" />
+    <Compile Include="Convert\ToSAM\Panel.cs" />
+    <Compile Include="Convert\ToSAM\PanelType.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SAM.Architectural.BHoM\SAM.Architectural.BHoM.csproj">
       <Project>{a98c4835-5eff-4dcb-8924-018d60391957}</Project>
       <Name>SAM.Architectural.BHoM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SAM.Core.BHoM\SAM.Core.BHoM.csproj">
+      <Project>{981eb247-8bae-4c2e-aa6e-3f9f7ebd9c47}</Project>
+      <Name>SAM.Core.BHoM</Name>
     </ProjectReference>
     <ProjectReference Include="..\SAM.Geometry.BHoM\SAM.Geometry.BHoM.csproj">
       <Project>{d601ca4b-323c-4b6e-864e-36ec72004cc5}</Project>
@@ -96,10 +103,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BHoM">
-      <Version>4.1.0-beta</Version>
+      <Version>4.2.0-beta</Version>
     </PackageReference>
     <PackageReference Include="BHoM.Engine">
-      <Version>3.3.0-alpha</Version>
+      <Version>4.2.0-beta</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>

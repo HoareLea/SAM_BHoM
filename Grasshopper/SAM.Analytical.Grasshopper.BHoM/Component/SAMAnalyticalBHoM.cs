@@ -18,7 +18,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// <summary>
         /// The latest version of this component
         /// </summary>
-        public override string LatestComponentVersion => "1.0.0";
+        public override string LatestComponentVersion => "1.0.1";
 
         /// <summary>
         /// Provides an Icon for the component.
@@ -48,7 +48,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// </summary>
         protected override void RegisterOutputParams(GH_OutputParamManager outputParamManager)
         {
-            outputParamManager.AddGenericParameter("BHoM", "BHoM", "BHoM Object", GH_ParamAccess.list);
+            outputParamManager.AddGenericParameter("BHoMObjects", "BHoMObjects", "BHoM Objects", GH_ParamAccess.list);
         }
 
         /// <summary>
@@ -64,19 +64,30 @@ namespace SAM.Analytical.Grasshopper.BHoM
                 return;
             }
 
+            List<BH.oM.Base.BHoMObject> bHoMObjects = null;
             if (sAMObject is Panel)
             {
-                dataAccess.SetDataList(0, new List<BH.oM.Environment.Elements.Panel>() { Analytical.BHoM.Convert.ToBHoM((Panel)sAMObject) });
-                return;
+                bHoMObjects = new List<BH.oM.Base.BHoMObject>() { Analytical.BHoM.Convert.ToBHoM((Panel)sAMObject) };
+            }
+            else if (sAMObject is Space)
+            {
+                bHoMObjects = new List<BH.oM.Base.BHoMObject>() { Analytical.BHoM.Convert.ToBHoM((Space)sAMObject) };
             }
             else if(sAMObject is AdjacencyCluster)
             {
-                List<BH.oM.Environment.Elements.Panel> panels_BHoM = ((AdjacencyCluster)sAMObject).ToBHoM();
-                dataAccess.SetDataList(0, panels_BHoM);
+                bHoMObjects = ((AdjacencyCluster)sAMObject).ToBHoM();
+            }
+            else if(sAMObject is AnalyticalModel)
+            {
+                bHoMObjects = ((AnalyticalModel)sAMObject).ToBHoM_BHoMObjects();
+            }
+            else
+            {
+                AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Invalid data");
                 return;
             }
 
-            AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Invalid data");
+            dataAccess.SetDataList(0, bHoMObjects);
         }
     }
 }

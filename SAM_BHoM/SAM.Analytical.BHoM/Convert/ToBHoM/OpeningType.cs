@@ -4,18 +4,18 @@ namespace SAM.Analytical.BHoM
 {
     public static partial class Convert
     {
-        public static OpeningType ToBHoM(this ApertureType apertureType)
+        public static BH.oM.Environment.Elements.OpeningType ToBHoM(this ApertureType apertureType)
         {
             switch (apertureType)
             {
                 case ApertureType.Window:
-                    return OpeningType.Window;
+                    return BH.oM.Environment.Elements.OpeningType.Window;
 
                 case ApertureType.Door:
-                    return OpeningType.Door;
+                    return BH.oM.Environment.Elements.OpeningType.Door;
             }
 
-            return OpeningType.Undefined;
+            return BH.oM.Environment.Elements.OpeningType.Undefined;
         }
     }
 }

@@ -76,6 +76,13 @@
   <ItemGroup>
     <Compile Include="Convert\ToBHoM\Building.cs" />
     <Compile Include="Convert\ToBHoM\BHoMObjects.cs" />
+    <Compile Include="Convert\ToBHoM\New\BHoMObjects.cs" />
+    <Compile Include="Convert\ToBHoM\New\Building.cs" />
+    <Compile Include="Convert\ToBHoM\New\Opening.cs" />
+    <Compile Include="Convert\ToBHoM\New\Panel.cs" />
+    <Compile Include="Query\OpeningType.cs" />
+    <Compile Include="Convert\ToBHoM\New\PanelType.cs" />
+    <Compile Include="Convert\ToBHoM\New\Space.cs" />
     <Compile Include="Convert\ToBHoM\Space.cs" />
     <Compile Include="Create\Levels.cs" />
     <Compile Include="Convert\ToBHoM\Opening.cs" />

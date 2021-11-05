@@ -32,25 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Analytical_oM">
-      <HintPath>..\..\references\Analytical_oM.dll</HintPath>
-    </Reference>
-    <Reference Include="Dimensional_oM, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\references\Dimensional_oM.dll</HintPath>
-    </Reference>
-    <Reference Include="Environment_Engine">
-      <HintPath>..\..\references\Environment_Engine.dll</HintPath>
-    </Reference>
-    <Reference Include="Environment_oM">
-      <HintPath>..\..\references\Environment_oM.dll</HintPath>
-    </Reference>
-    <Reference Include="Geometry_Engine">
-      <HintPath>..\..\references\Geometry_Engine.dll</HintPath>
-    </Reference>
-    <Reference Include="Geometry_oM">
-      <HintPath>..\..\references\Geometry_oM.dll</HintPath>
-    </Reference>
     <Reference Include="SAM.Analytical">
       <HintPath>..\..\..\SAM\build\SAM.Analytical.dll</HintPath>
     </Reference>

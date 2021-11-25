@@ -4,17 +4,17 @@ namespace SAM.Analytical.BHoM
 {
     public static partial class Convert
     {
-        public static Building ToBHoM(this ArchitecturalModel architecturalModel)
+        public static Building ToBHoM(this BuildingModel buildingModel)
         {
-            if(architecturalModel == null)
+            if(buildingModel == null)
             {
                 return null;
             }
 
             Building result = new Building()
             {
-                Location = Core.BHoM.Convert.ToBHoM(architecturalModel.Location),
-                Elevation = architecturalModel.Location.Elevation
+                Location = Core.BHoM.Convert.ToBHoM(buildingModel.Location),
+                Elevation = buildingModel.Location.Elevation
             };
 
             return result;

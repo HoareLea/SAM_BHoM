@@ -36,14 +36,14 @@ namespace SAM.Analytical.BHoM
             return result;
         }
 
-        public static BH.oM.Environment.Elements.Panel ToBHoM(this IPartition partition, ArchitecturalModel architecturalModel)
+        public static BH.oM.Environment.Elements.Panel ToBHoM(this IPartition partition, BuildingModel buildingModel)
         {
-            if (partition == null || architecturalModel == null)
+            if (partition == null || buildingModel == null)
             {
                 return null;
             }
 
-            IPartition partition_Temp = architecturalModel?.GetObject<IPartition>(partition.Guid);
+            IPartition partition_Temp = buildingModel?.GetObject<IPartition>(partition.Guid);
             if(partition_Temp == null)
             {
                 return null;
@@ -51,13 +51,13 @@ namespace SAM.Analytical.BHoM
 
             BH.oM.Environment.Elements.Panel result = ToBHoM(partition_Temp);
 
-            List<Space> spaces = architecturalModel.GetSpaces(partition_Temp);
+            List<Space> spaces = buildingModel.GetSpaces(partition_Temp);
             if (spaces != null)
             {
                 result.ConnectedSpaces = spaces.ConvertAll(x => x.Name);
             }
 
-            PartitionAnalyticalType partitionAnalyticalType = architecturalModel.PartitionAnalyticalType(partition_Temp);
+            PartitionAnalyticalType partitionAnalyticalType = buildingModel.PartitionAnalyticalType(partition_Temp);
             result.Type = partitionAnalyticalType.ToBHoM();
 
             return result;

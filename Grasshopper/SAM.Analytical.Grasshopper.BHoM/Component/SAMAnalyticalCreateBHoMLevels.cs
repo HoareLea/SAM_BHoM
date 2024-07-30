@@ -65,7 +65,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
                 return;
             }
 
-            List<BH.oM.Geometry.SettingOut.Level> levels = null;
+            List<BH.oM.Spatial.SettingOut.Level> levels = null;
             if(sAMObject is AdjacencyCluster)
                 levels = Analytical.BHoM.Create.Levels((AdjacencyCluster)sAMObject);
             else if(sAMObject is AnalyticalModel)

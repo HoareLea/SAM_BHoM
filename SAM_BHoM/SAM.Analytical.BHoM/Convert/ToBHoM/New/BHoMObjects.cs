@@ -38,7 +38,7 @@ namespace SAM.Analytical.BHoM
                 {
                     foreach(Level level in levels)
                     {
-                        BH.oM.Geometry.SettingOut.Level level_BHoM = Architectural.BHoM.Convert.ToBHoM(level);
+                        BH.oM.Spatial.SettingOut.Level level_BHoM = Architectural.BHoM.Convert.ToBHoM(level);
                         if(level_BHoM != null)
                         {
                             result.Add(level_BHoM);

@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29519.87
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAM.Analytical.BHoM", "SAM_BHoM\SAM.Analytical.BHoM\SAM.Analytical.BHoM.csproj", "{1EF60B02-13C6-4918-A39B-0A1342B37AFD}"
 EndProject
@@ -16,6 +15,11 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAM.Architectural.BHoM", "SAM_BHoM\SAM.Architectural.BHoM\SAM.Architectural.BHoM.csproj", "{A98C4835-5EFF-4DCB-8924-018D60391957}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAM.Core.BHoM", "SAM_BHoM\SAM.Core.BHoM\SAM.Core.BHoM.csproj", "{981EB247-8BAE-4C2E-AA6E-3F9F7EBD9C47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{050855E8-C9E6-4293-A724-AA258126EF2A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,7 @@
-﻿using Grasshopper.Kernel;
+// SPDX-License-Identifier: LGPL-3.0-or-later
+// Copyright (c) 2020–2026 Michal Dengusiak & Jakub Ziolkowski and contributors
+
+using Grasshopper.Kernel;
 using SAM.Analytical.Grasshopper.BHoM.Properties;
 using SAM.Core;
 using SAM.Core.Grasshopper;
@@ -7,7 +10,7 @@ using System.Collections.Generic;
 
 namespace SAM.Analytical.Grasshopper.BHoM
 {
-    public class SAMAnalyticalCreateBHoMLevels : GH_SAMComponent
+    public class SAMAnalyticalCreateBHoMLevels : GH_SAMVariableOutputParameterComponent
     {
         /// <summary>
         /// Gets the unique ID for this component. Do not change this ID after release.
@@ -17,7 +20,7 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// <summary>
         /// The latest version of this component
         /// </summary>
-        public override string LatestComponentVersion => "1.0.1";
+        public override string LatestComponentVersion => "1.0.2";
 
         /// <summary>
         /// Provides an Icon for the component.
@@ -37,17 +40,27 @@ namespace SAM.Analytical.Grasshopper.BHoM
         /// <summary>
         /// Registers all the input parameters for this component.
         /// </summary>
-        protected override void RegisterInputParams(GH_InputParamManager inputParamManager)
+        protected override GH_SAMParam[] Inputs
         {
-            inputParamManager.AddParameter(new GooJSAMObjectParam<SAMObject>(), "_analyticalObject", "_analyticalObject", "SAM Analytical Object such as AdjacencyCluster or AnalyticalModel", GH_ParamAccess.item);
+            get
+            {
+                List<GH_SAMParam> result = new List<GH_SAMParam>();
+                result.Add(new GH_SAMParam(new GooJSAMObjectParam<SAMObject>() { Name = "_analyticalObject", NickName = "_analyticalObject", Description = "SAM Analytical Object such as AdjacencyCluster or AnalyticalModel", Access = GH_ParamAccess.item }, ParamVisibility.Binding));
+                return result.ToArray();
+            }
         }
 
         /// <summary>
         /// Registers all the output parameters for this component.
         /// </summary>
-        protected override void RegisterOutputParams(GH_OutputParamManager outputParamManager)
+        protected override GH_SAMParam[] Outputs
         {
-            outputParamManager.AddGenericParameter("BHoMLevels", "BHoMLevels", "BHoM Levels", GH_ParamAccess.list);
+            get
+            {
+                List<GH_SAMParam> result = new List<GH_SAMParam>();
+                result.Add(new GH_SAMParam(new global::Grasshopper.Kernel.Parameters.Param_GenericObject() { Name = "BHoMLevels", NickName = "BHoMLevels", Description = "BHoM Levels", Access = GH_ParamAccess.list }, ParamVisibility.Binding));
+                return result.ToArray();
+            }
         }
 
         /// <summary>
@@ -59,7 +72,8 @@ namespace SAM.Analytical.Grasshopper.BHoM
         protected override void SolveInstance(IGH_DataAccess dataAccess)
         {
             SAMObject sAMObject = null;
-            if (!dataAccess.GetData(0, ref sAMObject) || sAMObject == null)
+            int index = Params.IndexOfInputParam("_analyticalObject");
+            if (index == -1 || !dataAccess.GetData(index, ref sAMObject) || sAMObject == null)
             {
                 AddRuntimeMessage(GH_RuntimeMessageLevel.Error, "Invalid data");
                 return;
@@ -77,8 +91,11 @@ namespace SAM.Analytical.Grasshopper.BHoM
                 return;
             }
 
-            dataAccess.SetDataList(0, levels);
-            return;
+            index = Params.IndexOfOutputParam("BHoMLevels");
+            if (index != -1)
+            {
+                dataAccess.SetDataList(index, levels);
+            }
         }
     }
 }
